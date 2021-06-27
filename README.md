@@ -6,8 +6,11 @@ Especially in 2020, instant heavy and violent rainfalls have caused detrimental 
 Primarily, I focused on excessive rainfall effects on agriculture in this project. However, excessive rainfalls can lead to numerous hazards, for example [1]:
 
 flooding, including risk to human life,
+
 damage to buildings and infrastructure,
+
 loss of crops and livestock,
+
 landslides, which can threaten human life, disrupt transport and communications.
 
 As shown in the latest studies, excessive rainfall can affect crop productivity in various ways, including direct physical damage, delayed planting and harvesting, restricted root growth, oxygen deficiency, and nutrient loss. Thus, too much rain can be as dangerous as drought for agriculture: "Data from the past three decades suggest that excessive rainfall can affect crop yield as much as excessive heat and drought. In a new study, an interdisciplinary team from the University of Illinois linked crop insurance, climate, soil, and corn yield data from 1981 through 2016. The study found that, during some years, excessive rainfall reduced U.S. corn yield by as much as 34% relative to the expected yield. Data suggest that drought and excessive heat caused a yield loss of up to 37% during some years [2]".
@@ -19,6 +22,7 @@ After doing some research about deep learning and neural networks, I decided to 
 Before building and testing my neural network model, I had collected weather data at my balcony and backyard in three kilometers radius for more than three months to create a local weather data set showing weather information in my neighborhood. To be able to elicit weather information even in extreme weather conditions, I used a Weather Station Kit with Anemometer, Wind Vane, and Rain Bucket by DFRobot with two different development boards:
 
 NodeMCU ESP-12E (WiFi-Enabled)
+
 Arduino Uno + DFRobot SIM808 GPS/GPRS/GSM Shield (GPRS-Enabled)
 
 Thus, I could transfer weather data via WiFi at my balcony or GPRS if the distance between my router and the weather station is too far away.
@@ -28,9 +32,13 @@ I decided to use Google Sheets, a cloud-based spreadsheet program, to collate we
 After completing collecting weather data for more than three months every five minutes, I built an artificial neural network (ANN) model with TensorFlow to make predictions on the rainfall intensity. Theoretically, I assigned a rainfall intensity class for each reading after scaling and normalizing the data set. Then, I trained the neural network model to classify these classes:
 
 No Rainfall
+
 Light Rainfall
+
 Moderate Rainfall
+
 Heavy Rainfall
+
 Violent Rainfall
 
 So, this is my project in a nutshell 😃
